@@ -31,11 +31,11 @@ This project provides a simple automated system for generating **quarterly adeno
 
 ## 📂 Project Structure
 
-├── app.py                # Main app interface (Streamlit/Flask)
-├── report_generator.py   # Core logic for DB query & PPT creation
-├── Gopath template.pptx  # PowerPoint slide template
-├── requirements.txt      # Python dependencies
-└── README.md             # Project documentation
+├── app.py # Main app interface (Streamlit/Flask)
+├── report_generator.py # Core logic for DB query & PPT creation
+├── Gopath template.pptx # PowerPoint slide template
+├── requirements.txt # Python dependencies
+└── README.md # Project documentation
 
 ---
 
