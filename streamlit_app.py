@@ -6,10 +6,7 @@ st.set_page_config(page_title="Gopath Report Generator", layout="centered")
 st.title("📊 Gopath Quarterly Adenoma Report")
 
 # 选择facility
-facility_list = [
-    "Digestive Disease Specialists - Regional SurgiCenter",
-    "Mississippi Valley Endoscopy"
-]
+facility_list = st.secrets["FACILITY_LIST"]
 facility = st.selectbox("Select a facility:", facility_list)
 
 # Generate Button
