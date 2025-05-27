@@ -4,6 +4,7 @@ from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
 from datetime import date, datetime
+import streamlit as st
 import os
 import re
 
@@ -27,12 +28,12 @@ def generate_report(facility_name: str) -> str:
 
     # ====== 2. Connect to DB ======
     conn = mysql.connector.connect(
-        host="gopath-db-rpt1.mysql.database.azure.com",
-        user="ehein",
-        password="Welcome123!",
-        database="gpisrpt",
-        port=3306
-    )
+            host=st.secrets["DB_HOST"],
+            user=st.secrets["DB_USER"],
+            password=st.secrets["DB_PASSWORD"],
+            database=st.secrets["DB_NAME"],
+            port=3306
+        )
 
     # ====== 3. Query Data ======
     query = f"""
